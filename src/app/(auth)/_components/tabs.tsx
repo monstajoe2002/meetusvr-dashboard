@@ -25,7 +25,7 @@ export const Tabs = () => {
           disabled={isPending}
           onClick={() => handleTabClick("/signup")}
         >
-          Sign Up
+          Signup
         </button>
       </div>
     </div>
