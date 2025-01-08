@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  min-height: 100dvh;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fcfcfc;
+  opacity: 90%;
+  width: 100%;
+  max-width: 800px;
+  max-height: 450px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  mix-blend-mode: multiply;
+}
