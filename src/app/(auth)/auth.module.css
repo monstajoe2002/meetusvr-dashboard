@@ -1,3 +1,12 @@
+:root {
+  --btn-background: linear-gradient(
+    70deg,
+    #ff5b00 0%,
+    #f70072 57%,
+    #860cdf 100%
+  );
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -41,7 +50,7 @@
     font-family: inherit;
   }
   & > .activeTab {
-    background: linear-gradient(45deg, #ff5b00 0%, #f70072 57%, #860cdf 100%);
+    background: var(--btn-background);
     color: white;
   }
 }
