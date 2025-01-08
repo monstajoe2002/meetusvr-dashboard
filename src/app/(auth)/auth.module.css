@@ -24,3 +24,19 @@
 .logo {
   mix-blend-mode: multiply;
 }
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-block: 20px;
+  padding-block: 10px;
+  border-radius: 999px;
+  background: #e5e6e8;
+}
+.activeTab {
+  border: none;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff5b00, #f70072 57%, #860cdf 100%);
+  color: white;
+}
