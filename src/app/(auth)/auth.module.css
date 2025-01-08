@@ -24,7 +24,7 @@
   opacity: 90%;
   width: 100%;
   max-width: 800px;
-  max-height: 450px;
+  max-height: 650px;
   margin: auto;
   padding: 20px;
   border-radius: 1rem;
@@ -32,6 +32,16 @@
 }
 .logo {
   mix-blend-mode: multiply;
+}
+.btn {
+  background: var(--btn-background);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 999px;
+  font-family: inherit;
 }
 .tabs {
   display: flex;
@@ -52,5 +62,21 @@
   & > .activeTab {
     background: var(--btn-background);
     color: white;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  & > input,
+  button {
+    padding: 10px;
+    border-color: #dedede;
+    border-width: thin;
+    border-radius: 999px;
+  }
+  & > input::placeholder {
+    font-size: 15px;
   }
 }
