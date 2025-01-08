@@ -14,7 +14,7 @@ export const Tabs = () => {
 
   return (
     <div>
-      <div className="tabs">
+      <div aria-disabled={isPending} className="tabs">
         <button disabled={isPending} onClick={() => handleTabClick("/login")}>
           Login
         </button>
