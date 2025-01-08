@@ -41,7 +41,6 @@
     font-family: inherit;
   }
   & > .activeTab {
-    opacity: 80%;
     background: linear-gradient(45deg, #ff5b00 0%, #f70072 57%, #860cdf 100%);
     color: white;
   }
