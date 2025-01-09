@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation";
-
 export const login = async (
   email: string,
   password: string,
   isEmployee: boolean
 ) => {
-  await fetch("https://api-yeshtery.dev.meetusvr.com/v1/yeshtery/token", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/yeshtery/token`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -16,5 +14,5 @@ export const login = async (
       isEmployee,
     }),
   });
-  redirect("/");
+  return res.json();
 };
