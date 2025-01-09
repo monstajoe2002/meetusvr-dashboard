@@ -25,10 +25,10 @@
   opacity: 90%;
   width: 100%;
   max-width: 800px;
-  max-height: 650px;
+  max-height: 600px;
+  padding-block: 40px;
   margin-inline: auto;
-  padding-block: 70px;
-  padding-inline: 20px;
+  padding-inline: 30px;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -43,6 +43,7 @@
   font-size: medium;
   font-weight: 600;
   border-radius: 999px;
+  border: none;
 }
 .tabs {
   display: flex;
@@ -73,11 +74,12 @@
   & > input,
   button {
     padding: 10px;
-    border-color: #dedede;
-    border-width: thin;
     border-radius: 999px;
   }
+
   & > input {
     font-size: 14px;
+    border-color: #dedede;
+    border-width: thin;
   }
 }
