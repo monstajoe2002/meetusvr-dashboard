@@ -1,5 +1,5 @@
 export const login = async (
-  username: string,
+  email: string,
   password: string,
   isEmployee: boolean
 ) => {
@@ -11,7 +11,7 @@ export const login = async (
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username,
+        email,
         password,
         isEmployee,
       }),
