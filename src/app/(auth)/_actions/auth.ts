@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export const login = async (_: unknown, formData: FormData) => {
+export const login = async (_initialState: unknown, formData: FormData) => {
   const cookieStore = await cookies();
   const rawFormData = {
     email: formData.get("email") as string,

@@ -82,4 +82,8 @@
     border-color: #dedede;
     border-width: thin;
   }
+  & > button:disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+  }
 }
