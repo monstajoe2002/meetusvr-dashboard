@@ -19,12 +19,12 @@ export const login = async (_initialState: unknown, formData: FormData) => {
   });
   const data = await res.json();
   if (!data.token) return data.message;
-  cookieStore.set("meetus-user", JSON.stringify(data), { httpOnly: true });
+  cookieStore.set("meetus-token", data.token, { httpOnly: true });
   redirect("/");
 };
 
 export const signout = async () => {
   const cookieStore = await cookies();
-  cookieStore.delete("meetus-user");
+  cookieStore.delete("meetus-token");
   redirect("/login");
 };
