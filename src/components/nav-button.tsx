@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./navButton.module.css";
-import { IconBaseProps } from "react-icons";
-interface NavButtonProps extends IconBaseProps {
-  icon: React.ComponentType<IconBaseProps>;
+import type { IconType } from "react-icons";
+interface NavButtonProps {
+  icon: IconType;
   label: string;
   className?: string;
 }
