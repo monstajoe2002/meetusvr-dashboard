@@ -48,7 +48,8 @@ body {
   width: 100%;
   max-width: 800px;
   max-height: 600px;
-  padding-block: 40px;
+  padding-top: 40px;
+  padding-bottom: 50px;
   margin-inline: auto;
   padding-inline: 30px;
   border-radius: 1rem;

@@ -12,14 +12,17 @@ export default async function Home() {
         Welcome to a world where virtual reality redefines experiences – a place
         where shopping and events converge to create an extraordinary journey.
       </p>
-      <button className={styles.homeButton}>
-        <SiHomeassistantcommunitystore />
-        <span>Home</span>
-      </button>
-      <button className={styles.logoutButton} onClick={signout}>
-        <IoLogOut />
-        <span>Logout</span>
-      </button>
+
+      <div className={styles.dashboardButtons}>
+        <button className={styles.homeButton}>
+          <SiHomeassistantcommunitystore size={30} />
+          <span>Home</span>
+        </button>
+        <button className={styles.logoutButton} onClick={signout}>
+          <IoLogOut size={30} />
+          <span>Logout</span>
+        </button>
+      </div>
     </main>
   );
 }

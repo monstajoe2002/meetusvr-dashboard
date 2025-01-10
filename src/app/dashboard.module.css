@@ -7,6 +7,8 @@
     #b33a68,
     #e64b87
   );
+  --button-font-size: 1.3rem;
+  --button-font-weight: 500;
 }
 .heading {
   margin-top: 2rem;
@@ -17,6 +19,10 @@
   font-size: 1.2rem;
 }
 .homeButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: var(--home-button-bg);
   border: none;
   border-radius: 4px;
@@ -24,8 +30,14 @@
   width: auto;
   height: auto;
   cursor: pointer;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
 }
 .logoutButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: var(--logout-button-bg);
   border: none;
   border-radius: 4px;
@@ -33,4 +45,14 @@
   width: auto;
   height: auto;
   cursor: pointer;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+}
+.dashboardButtons {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 250px;
+  margin-block: 2rem;
 }
