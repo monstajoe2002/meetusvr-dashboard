@@ -1,5 +1,12 @@
 :root {
-  --home-button-bg: linear-gradient(#9146ff, #cc85ff);
+  --gradient-rotation: -45deg;
+
+  --home-button-bg: linear-gradient(var(--gradient-rotation), #9146ff, #cc85ff);
+  --logout-button-bg: linear-gradient(
+    var(--gradient-rotation),
+    #b33a68,
+    #e64b87
+  );
 }
 .heading {
   margin-top: 2rem;
@@ -11,6 +18,15 @@
 }
 .homeButton {
   background: var(--home-button-bg);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+.logoutButton {
+  background: var(--logout-button-bg);
   border: none;
   border-radius: 4px;
   color: white;

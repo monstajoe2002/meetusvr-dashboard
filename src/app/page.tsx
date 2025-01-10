@@ -2,6 +2,7 @@ import { user } from "@/lib/auth";
 import { signout } from "./(auth)/_actions/auth";
 import styles from "./dashboard.module.css";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
+import { IoLogOut } from "react-icons/io5";
 export default async function Home() {
   const userInfo = await user();
   return (
@@ -15,7 +16,10 @@ export default async function Home() {
         <SiHomeassistantcommunitystore />
         <span>Home</span>
       </button>
-      <button onClick={signout}>Sign out</button>
+      <button className={styles.logoutButton} onClick={signout}>
+        <IoLogOut />
+        <span>Logout</span>
+      </button>
     </main>
   );
 }
