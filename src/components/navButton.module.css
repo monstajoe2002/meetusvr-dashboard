@@ -1,0 +1,7 @@
+:root {
+  --gradient-rotation: -45deg;
+  --home-button-bg: linear-gradient(var(--gradient-rotation), #9146ff, #cc85ff);
+}
+.navButton {
+  background: var(--home-button-bg);
+}

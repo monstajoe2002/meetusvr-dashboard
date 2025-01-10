@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import "../app/globals.css";
+import styles from "./bottomBar.module.css";
 import { BiSolidBattery } from "react-icons/bi";
 import { FaWifi } from "react-icons/fa";
 export const BottomBar = () => {
   return (
-    <div className="bottom-bar">
+    <div className={styles.bottomBar}>
       <Image
-        className="avatar"
+        className={styles.avatar}
         src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
         alt="avatar"
         width={50}
