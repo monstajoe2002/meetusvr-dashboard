@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import { BottomBar } from "@/components/bottom-bar";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
           />
           {children}
         </section>
+        <BottomBar />
       </body>
     </html>
   );
