@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import "../app/globals.css";
+import { BiSolidBattery } from "react-icons/bi";
+import { FaWifi } from "react-icons/fa";
 export const BottomBar = () => {
   return (
     <div className="bottom-bar">
@@ -11,6 +13,10 @@ export const BottomBar = () => {
         width={50}
         height={50}
       />
+      <p>10:28 PM</p>
+      <BiSolidBattery size={25} />
+      <FaWifi size={25} />
+      <p>28°C</p>
     </div>
   );
 };

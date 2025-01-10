@@ -1,5 +1,5 @@
 :root {
-  /* --background: */
+  --home-button-bg: linear-gradient(var(--gradient-rotation), #9146ff, #cc85ff);
   --foreground: #171717;
 }
 
@@ -73,6 +73,7 @@ body {
   opacity: 90%;
   border-radius: 999px;
   margin-top: auto;
+  gap: 15px;
 }
 .avatar {
   width: 50px;
