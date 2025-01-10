@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import bottomBarStyles from "./bottomBar.module.css";
@@ -11,7 +12,11 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { BsFillChatSquareDotsFill } from "react-icons/bs";
 import { BsCalendarEventFill } from "react-icons/bs";
 import { RiLayoutGrid2Fill } from "react-icons/ri";
+import { useIsClient, useMediaQuery } from "usehooks-ts";
 export const BottomBar = () => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const isClient = useIsClient();
+  if (!isDesktop && isClient) return;
   return (
     <div className={bottomBarStyles.bottomBar}>
       <Image
