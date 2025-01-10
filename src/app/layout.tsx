@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -24,8 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${inter.variable} ${geistMono.variable} container`}>
+        <section className="card">
+          <Image
+            className="logo"
+            src="/logo.jpg"
+            alt="logo"
+            width={184}
+            height={83}
+          />
+          {children}
+        </section>
       </body>
     </html>
   );

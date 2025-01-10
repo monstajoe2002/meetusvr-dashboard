@@ -26,3 +26,30 @@ body {
   margin: 0;
   font-family: inherit;
 }
+.logo {
+  mix-blend-mode: multiply;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  min-height: 100dvh;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding-inline: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fcfcfc;
+  opacity: 90%;
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  padding-block: 40px;
+  margin-inline: auto;
+  padding-inline: 30px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
