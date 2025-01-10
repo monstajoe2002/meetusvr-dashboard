@@ -20,6 +20,6 @@ export const login = async (_initialState: unknown, formData: FormData) => {
   });
   const data = await res.json();
   if (!data.token) return data.message;
-  cookieStore.set("token", data.token, { httpOnly: true });
+  cookieStore.set("meetus-user", JSON.stringify(data), { httpOnly: true });
   redirect("/");
 };
