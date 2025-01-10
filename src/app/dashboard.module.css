@@ -21,40 +21,33 @@
   text-align: center;
 }
 .homeButton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: var(--home-button-bg);
-  border: none;
-  border-radius: 4px;
-  color: white;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
 }
+.homeButton,
 .logoutButton {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--logout-button-bg);
   border: none;
-  border-radius: 4px;
+  border-radius: 1rem;
   color: white;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
+}
+.logoutButton {
+  background: var(--logout-button-bg);
 }
 .dashboardButtons {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  height: 250px;
+  flex: 1;
+  max-height: 250px;
+  height: 200px;
   margin-block: 2rem;
 }

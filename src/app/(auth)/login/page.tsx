@@ -7,7 +7,7 @@ export default function LoginPage() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const isEmailValid = emailRegex.test(email);
+  const isEmailValid = emailRegex.test(email) || email.length > 0;
   const isPasswordValid = password.length > 0; // Basic password check, adjust as needed
   const canSubmit = isEmailValid && isPasswordValid;
 

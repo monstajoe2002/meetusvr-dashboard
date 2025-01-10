@@ -45,8 +45,7 @@ body {
   flex: 1;
   flex-direction: column;
   align-items: center;
-  background-color: #fcfcfc;
-  opacity: 90%;
+  background-color: rgba(252, 252, 252, 0.9);
   width: 100%;
   max-width: 800px;
   min-width: 300px;
