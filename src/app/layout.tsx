@@ -3,6 +3,7 @@ import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import { BottomBar } from "@/components/bottom-bar";
+import { Menu } from "@/components/menu";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${geistMono.variable} container`}>
+        <Menu />
         <section className="card">
           <Image
             className="logo"
