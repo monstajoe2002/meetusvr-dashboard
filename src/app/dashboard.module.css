@@ -12,11 +12,13 @@
 }
 .heading {
   margin-top: 2rem;
+  text-align: center;
 }
 .description {
   margin-top: 2rem;
   text-wrap: balance;
   font-size: 1.2rem;
+  text-align: center;
 }
 .homeButton {
   display: flex;
