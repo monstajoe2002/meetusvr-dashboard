@@ -2,7 +2,6 @@
 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-
 export const login = async (_initialState: unknown, formData: FormData) => {
   const cookieStore = await cookies();
   const rawFormData = {
@@ -22,4 +21,10 @@ export const login = async (_initialState: unknown, formData: FormData) => {
   if (!data.token) return data.message;
   cookieStore.set("meetus-user", JSON.stringify(data), { httpOnly: true });
   redirect("/");
+};
+
+export const signout = async () => {
+  const cookieStore = await cookies();
+  cookieStore.delete("meetus-user");
+  redirect("/login");
 };
