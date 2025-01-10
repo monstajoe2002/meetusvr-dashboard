@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
   max-width: 1200px;
   padding-inline: 20px;
+  text-align: center;
 }
 .card {
   display: flex;

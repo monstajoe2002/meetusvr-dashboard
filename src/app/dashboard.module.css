@@ -1,0 +1,8 @@
+.heading {
+  margin-top: 2rem;
+}
+.description {
+  margin-top: 2rem;
+  text-wrap: balance;
+  font-size: 1.2rem;
+}
