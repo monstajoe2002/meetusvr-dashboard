@@ -9,10 +9,9 @@
   padding-inline: 30px;
   padding-block: 15px;
   background-color: #f4f4f4;
-  opacity: 90%;
   border-radius: 999px;
   margin-top: auto;
-  gap: 15px;
+  gap: 20px;
 }
 .avatar {
   width: 50px;

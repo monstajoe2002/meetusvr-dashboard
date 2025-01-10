@@ -1,7 +1,67 @@
 :root {
-  --gradient-rotation: -45deg;
-  --home-button-bg: linear-gradient(var(--gradient-rotation), #9146ff, #cc85ff);
+  --gradient-position: top;
+  --home-button-bg: linear-gradient(
+    to var(--gradient-position),
+    #9146ff,
+    #cc85ff
+  );
+  --sound-button-bg: linear-gradient(
+    to var(--gradient-position),
+    #b33a68,
+    #e64b87
+  );
+  --product-button-bg: linear-gradient(
+    to var(--gradient-position),
+    #2b71e0,
+    #4ecaf6
+  );
+  --assistant-button-bg: linear-gradient(
+    to var(--gradient-position),
+    #c6561f,
+    #fc6d27
+  );
+  --event-button-bg: linear-gradient(
+    to var(--gradient-position),
+    #688ca1,
+    #97cbdd
+  );
+  --menu-button-bg: linear-gradient(
+    to var(--gradient-position),
+    #4e565c,
+    #737273
+  );
 }
 .navButton {
+  display: block;
+  border-radius: 100%;
+  margin: auto;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.homeButton {
   background: var(--home-button-bg);
+}
+.soundButton {
+  background: var(--sound-button-bg);
+}
+.productButton {
+  background: var(--product-button-bg);
+}
+.assistantButton {
+  background: var(--assistant-button-bg);
+}
+.eventButton {
+  background: var(--event-button-bg);
+}
+.menuButton {
+  background: var(--menu-button-bg);
+}
+
+.navLabel {
+  text-align: center;
+  margin-top: 5px;
 }
