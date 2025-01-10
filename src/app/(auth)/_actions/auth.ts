@@ -8,19 +8,17 @@ export const login = async (formData: FormData) => {
   const rawFormData = {
     email: formData.get("email") as string,
     password: formData.get("password") as string,
-    isEmployee: false,
+    isEmployee: true,
   };
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/yeshtery/token`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      ...rawFormData,
-      isEmployee: true,
-    }),
+    body: JSON.stringify(rawFormData),
   });
   const data = await res.json();
   cookieStore.set("token", data.token, { httpOnly: true });
+  if (!data) return;
   redirect("/");
 };
