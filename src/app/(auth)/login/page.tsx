@@ -1,11 +1,11 @@
 "use client";
+import { useActionState } from "react";
 import { login } from "../_actions/auth";
 import styles from "../auth.module.css";
-import { useFormStatus } from "react-dom";
 export default function LoginPage() {
-  const { pending } = useFormStatus();
+  const [message, formAction, isPending] = useActionState(login, null);
   return (
-    <form action={login} className={styles.form}>
+    <form action={formAction} className={styles.form}>
       <label htmlFor="email">Email Address</label>
       <input
         type="email"
@@ -24,9 +24,10 @@ export default function LoginPage() {
         <input type="checkbox" id="remember-me" />
         <label htmlFor="remember-me">Remember me</label>
       </div>
-      <button disabled={pending} className={styles.btn} type="submit">
+      <button disabled={isPending} className={styles.btn} type="submit">
         Login
       </button>
+      {message && <p style={{ color: "red" }}>{message}</p>}
     </form>
   );
 }

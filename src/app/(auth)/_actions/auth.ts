@@ -3,13 +3,14 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export const login = async (formData: FormData) => {
+export const login = async (_: unknown, formData: FormData) => {
   const cookieStore = await cookies();
   const rawFormData = {
     email: formData.get("email") as string,
     password: formData.get("password") as string,
     isEmployee: true,
   };
+
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/yeshtery/token`, {
     method: "POST",
     headers: {
@@ -18,7 +19,7 @@ export const login = async (formData: FormData) => {
     body: JSON.stringify(rawFormData),
   });
   const data = await res.json();
+  if (!data.token) return data.message;
   cookieStore.set("token", data.token, { httpOnly: true });
-  if (!data) return;
   redirect("/");
 };
