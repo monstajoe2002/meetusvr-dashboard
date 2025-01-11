@@ -10,8 +10,8 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const isEmailValid = emailRegex.test(email) || email.length > 0;
-  const isPasswordValid = password.length > 0; // Basic password check, adjust as needed
-  const canSubmit = isEmailValid && isPasswordValid;
+  const isPasswordValid = password.length > 0;
+  const [canSubmit, setCanSubmit] = useState(isEmailValid && isPasswordValid);
   const [isPending, startTransition] = useTransition();
   const { login: clientLogin, message: formMessage } = useAuthStore();
 
@@ -22,7 +22,7 @@ export default function LoginPage() {
     const password = formData.get("password") as string;
     await clientLogin(email, password);
     startTransition(() => {
-      login(null, formData);
+      login(null, formData).then(() => setCanSubmit(true));
     });
   };
   return (

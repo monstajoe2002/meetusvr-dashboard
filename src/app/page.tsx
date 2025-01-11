@@ -14,11 +14,6 @@ export default function Home() {
   return (
     <main>
       <h1 className={styles.heading}>Good Evening, {user?.name}</h1>
-      <p className={styles.description}>
-        Welcome to a world where virtual reality redefines experiences – a place
-        where shopping and events converge to create an extraordinary journey.
-      </p>
-
       <div>
         <button disabled={isPending} onClick={handleLogout}>
           <span>Logout</span>
