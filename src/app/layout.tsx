@@ -28,13 +28,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${geistMono.variable} container`}>
         {children}
 
-        <Image
-          className="logo"
-          src={logo}
-          alt="Logo"
-          width={1000}
-          height={1200}
-        />
+        <Image className="logo" src={logo} alt="Logo" width={1000} />
       </body>
     </html>
   );

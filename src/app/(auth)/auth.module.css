@@ -41,4 +41,10 @@
   gap: 1.5rem;
 }
 .btn {
+  border: none;
+  padding: 20px 12px;
+  background: linear-gradient(to right, #6baef5, #57a3f4, #3e96f2);
+  color: white;
+  border-radius: 8px;
+  font-size: medium;
 }
