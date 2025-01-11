@@ -3,6 +3,8 @@ import { useState, useTransition } from "react";
 import { login } from "../_actions/auth";
 import styles from "../auth.module.css";
 import { useAuthStore } from "@/store/auth-store";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { TbLock } from "react-icons/tb";
 export default function LoginPage() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const [email, setEmail] = useState("");
@@ -31,20 +33,26 @@ export default function LoginPage() {
         experience.
       </p>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <input
-          type="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          placeholder="example@gmail.com"
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="********"
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        <div className={styles.inputContainer}>
+          <MdOutlineMailOutline className={styles.inputIcon} size={20} />
+          <input
+            type="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            placeholder="example@gmail.com"
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <TbLock className={styles.inputIcon} size={20} />
+          <input
+            type="password"
+            name="password"
+            placeholder="********"
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
 
         <button
           disabled={isPending || !canSubmit}
