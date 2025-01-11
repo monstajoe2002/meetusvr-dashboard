@@ -24,37 +24,46 @@ export default function LoginPage() {
     });
   };
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <label htmlFor="email">Email Address</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        placeholder="example@gmail.com"
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="********"
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <div>
-        <input type="checkbox" id="remember-me" />
-        <label htmlFor="remember-me">Remember me</label>
-      </div>
-      <button
-        disabled={isPending || !canSubmit}
-        className={styles.btn}
-        type="submit"
-      >
-        Login
-      </button>
-      {formMessage && <p style={{ color: "red" }}>{formMessage}</p>}
-    </form>
+    <div className={styles.formContainer}>
+      <h1 className={styles.heading}>Welcome Back</h1>
+      <p className={styles.text}>
+        Step into our shopping metaverse for an unforgettable shopping
+        experience.
+      </p>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input
+          type="email"
+          name="email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          placeholder="example@gmail.com"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="********"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button
+          disabled={isPending || !canSubmit}
+          className={styles.btn}
+          type="submit"
+        >
+          Login
+        </button>
+        {formMessage && <p style={{ color: "red" }}>{formMessage}</p>}
+        <p
+          style={{
+            color: "#62626b",
+            textAlign: "center",
+            marginTop: "15px",
+          }}
+        >
+          Don&apos;t have an account? Sign up
+        </p>
+      </form>
+    </div>
   );
 }
