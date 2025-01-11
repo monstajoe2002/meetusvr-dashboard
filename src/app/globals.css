@@ -10,10 +10,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background-image: url("../../public/background.png");
-  background-size: cover;
-  background-position: bottom;
+  background: linear-gradient(
+    135deg,
+    rgba(237, 231, 246, 0.9) 0%,
+    /* Light purple */ rgba(225, 220, 250, 0.9) 25%,
+    /* Purple-blue transition */ rgba(207, 216, 250, 0.9) 100% /* Light blue */
+  );
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,38 +26,4 @@ body {
   padding: 0;
   margin: 0;
   font-family: inherit;
-}
-.logo {
-  mix-blend-mode: multiply;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: auto;
-  min-height: 100vh;
-  max-width: 1200px;
-  padding-inline: 20px;
-  padding-bottom: calc(80px + 6rem);
-}
-.card {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(252, 252, 252, 0.9);
-  width: 100%;
-  max-width: 800px;
-  min-width: 300px;
-  overflow-clip-margin: auto;
-  max-height: 600px;
-  padding-top: 40px;
-  padding-bottom: 50px;
-  margin-inline: auto;
-  padding-inline: 30px;
-  border-radius: 1rem;
-  text-align: start;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

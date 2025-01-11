@@ -1,8 +1,6 @@
 "use client";
 import { signout } from "./(auth)/_actions/auth";
 import styles from "./dashboard.module.css";
-import { SiHomeassistantcommunitystore } from "react-icons/si";
-import { IoLogOut } from "react-icons/io5";
 import { useAuthStore } from "@/store/auth-store";
 import { useTransition } from "react";
 export default function Home() {
@@ -21,17 +19,8 @@ export default function Home() {
         where shopping and events converge to create an extraordinary journey.
       </p>
 
-      <div className={styles.dashboardButtons}>
-        <button disabled={isPending} className={styles.homeButton}>
-          <SiHomeassistantcommunitystore size={30} />
-          <span>Home</span>
-        </button>
-        <button
-          disabled={isPending}
-          className={styles.logoutButton}
-          onClick={handleLogout}
-        >
-          <IoLogOut size={30} />
+      <div>
+        <button disabled={isPending} onClick={handleLogout}>
           <span>Logout</span>
         </button>
       </div>
